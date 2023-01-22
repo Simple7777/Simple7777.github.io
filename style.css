@@ -2,97 +2,78 @@
   margin: 0;
   padding: 0;
 }
+
 body{
     background-color: rgb(233, 192, 27);
-    overflow-y: none;
 }
+
 ::-webkit-scrollbar{
   width: 8px;
 }
+
 ::-webkit-scrollbar:horizontal {
   display: none;
 }
+
 ::-webkit-scrollbar-track{
   background-color: #000000;
 }
+
 ::-webkit-scrollbar-thumb{
   background-color: #fecc33;
-  border-radius: 3 3 1 1;
-    }
+}
+
 .nome{
+    flex-basis: 80%;
     color: rgb(9, 8, 8);
     font-family: 'Alfa Slab One', cursive;
-    font-size: 118px;
-    margin: 70px;
     letter-spacing: 5px;
 }
-.principal{
-    padding-bottom: 40px;
-    margin: 80px 0;
-    height: 652px;  
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center
+
+.principal {
+  margin: 80px 0;
+  height: 652px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
-@media all and (max-width: 992px){
-  .principal{
-    
-    padding-bottom: 100px;
-    display: flex;
-    flex-direction:column;
-    align-items: center
-}
-.nome{
-  color: rgb(9, 8, 8);
-  font-family: 'Alfa Slab One', cursive;
-  font-size: 41px;
-  letter-spacing: 8px;
-}
-  }
+
 .nome h1{
   text-align: left;
   bottom: 200px;
 }
+
 .d-link{
   font-weight: 700;
   opacity: 0.7;
 }
+
 .d-link:hover{
 color: white;
 transition: 0.3s;
 opacity: 1;
 }
+
 a{
   all: unset;
   cursor: pointer;
 }
+
 .icons{
   display: flex;
   justify-content: space-evenly;
   margin-top: 20px;
 }
+
 .icon{
-  width: 30rem;
   top: 400px;
   border-radius: 100%;
-  margin-right: 10px;
   border: 6px solid #070707;
   animation: rotateAvatar 2s 1 ease-in-out;
 }
-@media all and (max-width: 992px){
-  .icon{
-    border-radius: 60px 60px 60px 60px;
-    width: 23rem;
-    padding-left: 9px;
-    animation: none;
-    border: none;
-  }
-  .icons{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
-  }
-  }
+
 @keyframes rotateAvatar {
   from{
     transform: rotate(360deg);
@@ -107,64 +88,116 @@ a{
   cursor: pointer;
   transition: all 0.5s;
 }
+
 .icone-git:hover{
   transform: scale(1.2);
 }
+
 .icone-steam{
   border-radius: 100%;
   width: 60px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
+
 .icone-steam:hover{
   transform: scale(1.2);
 }
-  .textos{
-    padding-bottom: 100px;
-    padding: 150px;
-    background-color: rgb(22, 22, 22 );
-  }
-  @media all and (max-width: 992px){
+
 .textos{
-  width: 280px;
-  padding-bottom: 50px;
-  padding: 55px;
+  padding: 150px 0;
   background-color: rgb(22, 22, 22 );
-  background-size: cover;
 }
-    }
-  .nome h1{
-    text-align: left;
-    bottom: 200px;
+
+.textos h1 {
+  font-size: 2.5em;
+}
+
+.textos p {
+  font-size: 1.3em;
+  line-height: 28px;
+  font-family: 'DM Sans', sans-serif;
+  color: #fac72f;
+}
+
+.nome h1{
+  text-align: left;
+  bottom: 200px;
+}
+
+.textos h1{
+  color: rgb(227, 193, 56);
+  padding-bottom: 20px;
+  font-family: 'Rowdies', cursive;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.contentPrincipalimg > img {
+  width: 350px;
+}
+
+.contentPrincipalimg {
+  flex-basis: 20%;
+}
+
+.principal h1 {
+  font-size: 4em;
+}
+
+@media all and (max-width: 997px){
+  .contentPrincipalimg {
+    margin-bottom: 20px;
   }
+
+  .principal{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    height: auto;
+    margin: 40px 0;
+  }
+
+  .principal h1 {
+    text-align: center;
+    padding: 0 40px;
+    font-size: 2.2em;
+  }
+
+  .nome{
+    color: rgb(9, 8, 8);
+    font-family: 'Alfa Slab One', cursive;
+  }
+
+  .icons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+
+  .textos{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(22, 22, 22 );
+    background-size: cover;
+  }
+
   .textos h1{
     color: rgb(227, 193, 56);
-    padding-bottom: 20px;
-    font-family: 'Rowdies', cursive;
-    font-size: 90px;
+    padding-left: 10px;
+    padding-bottom: 26px;
+    font-family: 'Fredoka One', cursive;
   }
-  @media all and (max-width: 992px){
-    .textos h1{
-      color: rgb(227, 193, 56);
-      padding-left: 10px;
-      padding-bottom: 26px;
-      font-family: 'Fredoka One', cursive;
-      font-size: 55px;
-    }
-        }
+
   .textos p{
-    font-family: 'DM Sans', sans-serif;
-    font-size: 60px;
-    color: #fac72f;
-    
+    text-align: center;
+    padding: 0 40px;
   }
-  @media all and (max-width: 992px){
-    .textos p{
-      color: #fac72f;
-      text-align: center;
-      padding-right: 2px;
-      left: 2px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 32px;
-    }
+
+  .contentPrincipalimg > img {
+    width: 250px;
   }
+}
