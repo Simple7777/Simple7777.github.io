@@ -1,4 +1,4 @@
-axios.get('https://api.orgdestiny.me/xyz/903339096074747935')
+axios.get('https://api.orgdestiny.com/xyz/903339096074747935')
   .then(function (response) {
     // Aqui vc trata os dados, os dados retornados estarão dentro do parâmetro response
     document.getElementById("avatar").src = 'https://cdn.discordapp.com/avatars/903339096074747935/' + response.data.user.avatar + '?size=1024'
